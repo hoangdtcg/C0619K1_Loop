@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenTo</title>
+</head>
+<body>
+<script>
+
+    let num = parseInt(prompt("Enter the number"));
+    let count = 0;
+    let N = 2;
+    document.write(num + " nhung so nguyen to");
+    while (count < num) {
+        if (checkPrime(N)) {
+            document.write(N + " ");
+            count++
+        }
+        N++
+    }
+    function checkPrime(N) {
+        for (i=2; i<N-1; i++){
+            if(N%i ==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+</script>
+</body>
+</html>

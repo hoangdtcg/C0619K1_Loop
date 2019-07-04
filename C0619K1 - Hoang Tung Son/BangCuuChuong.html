@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BangCuuChuong</title>
+</head>
+<body>
+<h1>Bảng Cửu Chương</h1>
+<script>
+    let table = '<table id="table" bgcolor="#f0ffff" border="1" style="width: 300px">';
+
+    for(i = 1; i < 10; i++){
+        table = table + '<tr>';
+        for (j = 1; j < 10; j++){
+            let valueI = Number(i);
+            let valueJ = Number(j);
+
+            table = table + '<td>' + valueI + 'x' + valueJ + '=' + valueJ*valueI + '</td>';
+        }
+        table = table + '</tr>';
+    }
+
+    table = table + '</table>';
+
+    document.write(table);
+</script>
+</body>
+</html>
