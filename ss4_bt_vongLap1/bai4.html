@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let temp = 0;
+    let count = 1;
+
+    //document.write('1' + '<br>')
+    for (let i = 0; a < 10000 && count <= 1; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
+
+        if (b % 5 == 0) {
+            document.write(b + '<br>');
+            count++;
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

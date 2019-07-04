@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lon hon be hon</title>
+</head>
+<body>
+
+FIND SECRET NUMBER GAME!
+<br>
+From number:
+<br>
+<input id="formInput" type="text"/>
+<br>
+To number:
+<br>
+<input id='toInput' type="text"/>
+<br>
+<input type="button" onclick="maxMin()" value="GAME ON">
+<br>
+<p id="alertRange"></p>
+<br>
+<br>
+
+GUESS:
+<br>
+<input id="guessId" type="text"/>
+<br>
+<input type="button" onclick="check()" value="GAME ON">
+<br>
+<p id="showId"></p>
+
+<script>
+
+    let formNumber;
+    let toNumber;
+    let randomNumber;
+
+    function maxMin() {
+
+        formNumber = parseInt(document.getElementById('formInput').value);
+        toNumber = parseInt(document.getElementById('toInput').value);
+        randomNumber =Math.round( (Math.random() * (toNumber - formNumber) ) + formNumber );
+
+        document.getElementById('alertRange').innerHTML += 'Đoán trong khoảng ' + formNumber + ' đến ';
+        document.getElementById('alertRange').innerHTML += toNumber + '<br>';
+        document.getElementById('alertRange').innerHTML += randomNumber;
+    }
+
+    function check() {
+
+
+        let guessNumber = parseInt(document.getElementById('guessId').value);
+        //kiểm tra lớn hơn, nhỏ hơn
+        document.getElementById('showId').innerHTML = '';
+        if (guessNumber > randomNumber) {
+            document.getElementById('showId').innerHTML += guessNumber + ' lớn hơn số bí mật';
+        } else if (guessNumber < randomNumber) {
+            document.getElementById('showId').innerHTML += guessNumber + ' nhỏ hơn số bí mật';
+        } else if (guessNumber == randomNumber) {
+            document.getElementById('showId').innerHTML += guessNumber + ' là số bí mật! BẠN GIỎI VCC!!!';
+        }
+    }
+
+</script>
+
+</body>
+</html>

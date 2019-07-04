@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finonaci</title>
+</head>
+<body>
+
+<script>
+    let a = 0;
+    let b = 1;
+    let temp = 0;
+
+    document.write('1' + '<br>')
+    for (let i = 0; a < 10000 ; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
+        document.write(b + '<br>');
+    }
+
+
+</script>
+</body>
+</html>
