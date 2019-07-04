@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+<body>
+
+<SCRIPT>
+    //in dấu * và dấu ' '
+
+    for (let i = 1; i <6 ; i++) {
+        document.write('<br>')
+        for (let j = 0; j <i ; j++) {
+            document.write(' * ')
+        }
+    }
+    document.write('<br>')
+
+    // in hinh tiep theo
+    for (let i = 1; i <6 ; i++) {
+        document.write('<br>')
+        for (let j = 6; i<j ;j-- ) {
+            document.write(' * ')
+        }
+    }
+    document.write('<br>')
+
+
+    // in hinh tiep theo
+    for (let i = 1; i <6 ; i++) {
+        document.write('<br>')
+        for (let j = 6; i<j ;j-- ) {
+            document.write('&nbsp;&nbsp;&nbsp;')
+        }
+        for (let j = 0; j <i ; j++) {
+            document.write(' * ')
+        }
+    }
+    document.write('<br>')
+
+    // in hinh tiep theo
+    for (let i = 1; i <6 ; i++) {
+        document.write('<br>')
+
+        for (let j = 0; j <i ; j++) {
+            document.write('&nbsp;&nbsp;&nbsp;')
+        }
+        for (let j = 6;  i<j ;j-- ) {
+            document.write(' * ')
+        }
+    }
+
+
+
+
+</SCRIPT>
+
+</body>
+</html>
