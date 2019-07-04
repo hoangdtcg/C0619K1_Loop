@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Các Số Nguyên Tố Đầu Tiên</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Mời bạn nhập vào số N= "));
+    let tong=0;
+    let count = 0;
+    let i = 2;
+    while (count < num) {
+        let dem = 0;
+        for (let j = 2; j <= (Math.sqrt(i)); j++) {
+            if (i % j == 0) {
+                dem += 1;
+            }
+        }
+        if (dem == 0) {
+            document.write(" " + i);
+            count += 1;
+            tong+=i;
+        }
+        i++;
+
+    }
+    result=tong/num;
+    document.write("<br/>Trung bình cộng của " + num + " nguyên tố đầu tiên là:" +result);
+</script>
+</body>
+</html>
