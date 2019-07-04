@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let num = Number(prompt("Nhập số lượng số nguyên tố cần in ra"),'');
+        let count = 0;
+
+        let i=2;
+        while (count<num){
+            if(kiemTraSNT(i)){
+                document.write(i + " ");
+                count += 1;
+            }
+            i++;
+        }
+        function kiemTraSNT(i) {
+            if(i<2){
+                return false;
+            }
+            if(i==2){
+                return true;
+            }
+            for(let j=2; j<=Math.sqrt(i); j++) {
+                if (i%j == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
