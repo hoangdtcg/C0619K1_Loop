@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+</head>
+<body>
+<input type="button" onclick="play()" value="Chơi"/>
+<script>
+    function play() {
+        let diemBatDau = parseInt(prompt('bạn muôn đoan trong khoảng nao? Nhập điểm bắt đầu'));
+        let diemKetThuc = parseInt(prompt('bạn muôn đoan trong khoảng nao? Nhập điểm kết thúc'));
+        let soNgauNhien = parseInt(Math.random() * (diemKetThuc - diemBatDau + 1)) + diemBatDau;
+        console.log(soNgauNhien);
+        count = 1;
+        while (count <= 3) {
+            let soChon = parseInt(prompt('nhap so ban chon'));
+            if (soChon == soNgauNhien) {
+                alert('Chinh xac. Chuc mung!');
+                break;
+            }
+            if (soChon > soNgauNhien) {
+                alert('so ban chon lon hon, chon lai!');
+                count++;
+                continue;
+            }
+            if (soChon < soNgauNhien){
+                alert('so ban chon nho hon, chon lai!');
+                count++;
+            }
+        }
+    }
+</script>
+</body>
+</html>
