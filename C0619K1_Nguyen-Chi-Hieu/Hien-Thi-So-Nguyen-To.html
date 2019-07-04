@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Nhập số lượng số nguyên tố cần hiển thị :"));
+        let count = 0;
+        let N = 2;
+        document.write(num + ' số nguyên tố đầu tiên là : ');
+        while (count < num) {
+            if (KiemTra(N)){
+                document.write(N + ' ');
+                count++;
+            }
+            N++;
+        }
+        function KiemTra(N) {
+            console.log(N);
+            if(N < 2)
+                return false;
+
+            for (i=2;i<N-1;i++) {
+                if (N % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
