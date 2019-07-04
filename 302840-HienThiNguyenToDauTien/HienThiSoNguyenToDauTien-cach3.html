@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt(("Nhập số lượng số nguyên tố:")));
+    let checkSnt = true;
+    let count = 0;
+    let number = 3;
+    while (count<n) {
+        for (i = 2; i < number; i++) {
+            if (number % i == 0) {
+                checkSnt = false;
+                break;
+            }
+        }
+        if (checkSnt) {
+            document.write(number + " la so nguyen to" + "<br>")
+            count++;
+        }
+        checkSnt=true;
+        number++;
+    }
+</script>
+</body>
+
+<
