@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim so chia het cho 5</title>
+</head>
+<body>
+<script>
+    let a = 0, b = 1, luuGiaTri, count = 1;
+    while (count <= 20) {
+        luuGiaTri = a;
+        a = a + b;
+        b = luuGiaTri;
+        count++;
+        if (b != 0 && b % 5 == 0) {
+            break;
+        }
+    }
+    document.write(b);
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hien thi so fibonacci</title>
+</head>
+<body>
+<script>
+    let a = 0, b = 1, luuGiaTri, count = 1;
+    while (count <= 20) {
+        luuGiaTri = a;
+        a = a + b;
+        b = luuGiaTri;
+        document.write(b + ' ');
+        count++;
+    }
+</script>
+</body>
+</html>

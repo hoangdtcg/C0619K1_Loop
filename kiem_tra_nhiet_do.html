@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra nhiet do</title>
+</head>
+<body>
+<script>
+    let nhietDo=0;
+    while (nhietDo < 20 || nhietDo > 100) {
+        nhietDo = Number(prompt('nhap nhiet do hien tai'));
+        if (nhietDo < 20) {
+            alert('tang nhiet do len');
+        }
+        if (nhietDo > 100) {
+            alert('giam nhiet do di');
+        }
+    }
+</script>
+</body>
+</html>
